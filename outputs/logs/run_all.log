@@ -1,0 +1,10 @@
+2026-08-18 10:16:07 - INFO - Démarrage du pipeline | S0=100.00 K=100.00 r=0.0200 sigma=0.2000 T=1.00 N=50000 seed=42
+2026-08-18 10:16:07 - INFO - Call BS=8.916037 | MC brut=8.926239 (se=0.062027)
+2026-08-18 10:16:07 - INFO - Put  BS=6.935905 | MC brut=6.945677 (se=0.043442)
+2026-08-18 10:16:07 - INFO - Call final (antithétique+contrôle)=8.912794 (se=0.036823) | réduction IC=40.63%
+2026-08-18 10:16:07 - INFO - Put  final (antithétique+contrôle)=6.932662 (se=0.036823) | réduction IC=15.24%
+2026-08-18 10:16:10 - INFO - Call asiatique final=5.378000 (se=0.017433) | réduction IC=52.08%
+2026-08-18 10:16:10 - INFO - Down-and-out final=8.840028 (se=0.004554) | réduction IC=92.67%
+2026-08-18 10:16:18 - INFO - Greeks calculés pour les 4 produits.
+2026-08-18 10:16:20 - INFO - Figures sauvegardées dans outputs/figures/.
+2026-08-18 10:16:20 - INFO - Pipeline terminé avec succès.

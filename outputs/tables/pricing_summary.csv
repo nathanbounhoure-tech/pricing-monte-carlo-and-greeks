@@ -1,0 +1,5 @@
+produit,estimateur,prix,erreur_type,reference_bs
+Call européen,Antithétique + contrôle (stock),8.912794320295484,0.0368225608701921,8.916037278572539
+Put européen,Antithétique + contrôle (stock),6.932661650971009,0.03682256087019212,6.93590460924807
+Call asiatique arithmétique,Antithétique + contrôle (call européen),5.377999726269921,0.017432995984894707,
+Down-and-out call,Antithétique + contrôle (call européen),8.840028046066168,0.00455351315536579,
