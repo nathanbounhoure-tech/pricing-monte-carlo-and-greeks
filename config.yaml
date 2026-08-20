@@ -1,0 +1,34 @@
+# Configuration du pipeline de pricing Monte Carlo
+# Toutes les valeurs peuvent être modifiées sans toucher au code.
+
+market:
+  S0: 100.0       # spot initial
+  K: 100.0        # strike
+  r: 0.02         # taux sans risque (continu)
+  sigma: 0.20     # volatilité
+  T: 1.0          # maturité (années)
+
+simulation:
+  n_paths: 50000  # nombre de trajectoires pour le pricing principal
+  seed: 42        # seed pour la reproductibilité
+  antithetic: true
+
+asian:
+  n_fixings: 12   # nombre de dates de fixing (moyenne arithmétique, ~mensuelle sur 1 an)
+
+barrier:
+  level: 80.0     # niveau de la barrière down-and-out (80% du spot)
+  n_steps: 252    # pas de surveillance discrète de la barrière (~quotidien, 252 jours ouvrés)
+
+greeks:
+  bump_S_pct: 0.01      # bump relatif sur S0 pour le delta/gamma par différences finies
+  bump_sigma_pct: 0.01  # bump relatif sur sigma pour le vega par différences finies
+  n_paths_bump: 40000   # nombre de trajectoires utilisées pour chaque évaluation bumpée (exotiques)
+
+convergence:
+  n_values: [500, 1000, 2500, 5000, 10000, 25000, 50000, 100000]
+
+sensitivity:
+  sigma_range: [0.10, 0.15, 0.20, 0.25, 0.30, 0.35, 0.40]
+  maturity_range: [0.25, 0.5, 1.0, 1.5, 2.0, 3.0]
+  strike_range: [80, 90, 100, 110, 120]
